@@ -30,6 +30,50 @@ It’s designed for programmers, makers, tinkerers, and anyone who thinks regula
 
 ---
 
+## LED Matrix Layout (5×5 — Seconds Elapsed or Remaining This Year)
+
+The 5×5 LED matrix can display the number of seconds **elapsed** or **remaining** in the current year, counting upward or downward depending on your chosen mode.  
+Each LED corresponds to one bit in a 25‑bit binary number:
+
+- `1` = LED on  
+- `0` = LED off  
+
+Although the matrix is shown here in plain binary, the actual clock supports multiple **RGBW color themes**, allowing you to choose how the “on” LEDs appear (white, red, green, blue, or mixed).
+
+### Bit Layout
+
+Bits are arranged left‑to‑right, top‑to‑bottom:
+
+```
+bit 24  bit 23  bit 22  bit 21  bit 20
+bit 19  bit 18  bit 17  bit 16  bit 15
+bit 14  bit 13  bit 12  bit 11  bit 10
+bit 9   bit 8   bit 7   bit 6   bit 5
+bit 4   bit 3   bit 2   bit 1   bit 0
+```
+
+---
+
+## Example: Binary Value for **1 Second**
+
+Decimal `1` in 25‑bit binary:
+
+```
+0000000000000000000000001
+```
+
+Only **bit 0** is on, so the bottom‑right LED is lit.
+
+|   | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| **A** | 0 | 0 | 0 | 0 | 0 |
+| **B** | 0 | 0 | 0 | 0 | 0 |
+| **C** | 0 | 0 | 0 | 0 | 0 |
+| **D** | 0 | 0 | 0 | 0 | 0 |
+| **E** | 0 | 0 | 0 | 0 | 1 |
+
+---
+
 ## 🚀 Getting Started
 *(Add installation steps, wiring diagrams, or build instructions here)*
 
