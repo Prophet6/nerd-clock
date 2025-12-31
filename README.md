@@ -1,4 +1,5 @@
-# 🕒 Nerd Clock  
+# 🕒 Nerd Clock
+
 ### A binary clock for unapologetic nerds
 
 Nerd Clock is a compact RGBW LED‑matrix binary time display with optional HDMI output for visualizing the clock on a screen.  
@@ -9,13 +10,15 @@ It’s designed for programmers, makers, tinkerers, and anyone who thinks regula
 ## ✨ Features
 
 ### 🖥️ HDMI Display Output
-- Visual binary clock matrix  
-- Optional keyboard shortcuts (when a keyboard is connected)  
-- Configurable text line for extra time‑related info  
+
+* Visual binary clock matrix
+* Optional keyboard shortcuts (when a keyboard is connected)
+* Configurable text line for extra time‑related info
 
 ### 🔌 GPIO LED Output
-- Supports RGBW LED strings  
-- Specifically designed for **SK6812‑style** LEDs  
+
+* Supports RGBW LED strings
+* Specifically designed for **SK6812‑style** LEDs
 
 ---
 
@@ -35,8 +38,8 @@ It’s designed for programmers, makers, tinkerers, and anyone who thinks regula
 The 5×5 LED matrix can display the number of seconds **elapsed** or **remaining** in the current year, counting upward or downward depending on your chosen mode.  
 Each LED corresponds to one bit in a 25‑bit binary number:
 
-- `1` = LED on  
-- `0` = LED off  
+* `1` = LED on
+* `0` = LED off
 
 Although the matrix is shown here in plain binary, the actual clock supports multiple **RGBW color themes**, allowing you to choose how the “on” LEDs appear (white, red, green, blue, or mixed).
 
@@ -63,19 +66,23 @@ Decimal `1` in 25‑bit binary:
 ```
 
 Only **bit 0** is on, so the bottom‑right LED is lit.
-
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 0 | 1 |
+---------------------
+| 0 | 0 | 0 | 0 | 0 | 
+| 0 | 0 | 0 | 0 | 0 | 
+| 0 | 0 | 0 | 0 | 0 | 
+| 0 | 0 | 0 | 0 | 0 | 
+| 0 | 0 | 0 | 0 | 1 | 
+---------------------
 
 ---
 
 ## 🚀 Getting Started
+
 *(Add installation steps, wiring diagrams, or build instructions here)*
 
 ---
 
 ## 🛠️ Future Enhancements
+
 *(Optional — add roadmap here)*
+
