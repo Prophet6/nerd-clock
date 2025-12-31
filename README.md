@@ -26,7 +26,7 @@ It’s designed for programmers, makers, tinkerers, and anyone who thinks regula
 | HDMI Output | Binary matrix, keyboard shortcuts, optional text line |
 | LED Output | RGBW support, SK6812‑compatible |
 | Platform | Raspberry Pi / SBC‑friendly GPIO design |
-| Use Case | Desk clock, wall display, ambient lighting |
+| Use Case | Desk clock, wall display, impressing the shit out of colleagues, ambient lighting, etc. |
 
 ---
 
