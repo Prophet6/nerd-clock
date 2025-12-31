@@ -25,7 +25,7 @@ It’s designed for programmers, makers, tinkerers, and anyone who thinks regula
 ## 📦 What This Version Includes
 
 | Feature Category | Details |
-|------------------|---------|
+| ---------------- | ------- |
 | HDMI Output | Binary matrix, keyboard shortcuts, optional text line |
 | LED Output | RGBW support, SK6812‑compatible |
 | Platform | Raspberry Pi / SBC‑friendly GPIO design |
@@ -47,7 +47,7 @@ Although the matrix is shown here in plain binary, the actual clock supports mul
 
 Bits are arranged left‑to‑right, top‑to‑bottom:
 
-```
+```text
 bit 24  bit 23  bit 22  bit 21  bit 20
 bit 19  bit 18  bit 17  bit 16  bit 15
 bit 14  bit 13  bit 12  bit 11  bit 10
@@ -61,18 +61,19 @@ bit 4   bit 3   bit 2   bit 1   bit 0
 
 Decimal `1` in 25‑bit binary:
 
-```
+```binary
 0000000000000000000000001
 ```
 
 Only **bit 0** is on, so the bottom‑right LED is lit.
----------------------
-| 0 | 0 | 0 | 0 | 0 | 
-| 0 | 0 | 0 | 0 | 0 | 
-| 0 | 0 | 0 | 0 | 0 | 
-| 0 | 0 | 0 | 0 | 0 | 
-| 0 | 0 | 0 | 0 | 1 | 
----------------------
+
+| - | 1 | 2 | 3 | 4 | 5 |
+| - | - | - | - | - | - |
+| **A** | 0 | 0 | 0 | 0 | 0 |
+| **B** | 0 | 0 | 0 | 0 | 0 |
+| **C** | 0 | 0 | 0 | 0 | 0 |
+| **D** | 0 | 0 | 0 | 0 | 0 |
+| **E** | 0 | 0 | 0 | 0 | 1 |
 
 ---
 
@@ -85,4 +86,3 @@ Only **bit 0** is on, so the bottom‑right LED is lit.
 ## 🛠️ Future Enhancements
 
 *(Optional — add roadmap here)*
-
