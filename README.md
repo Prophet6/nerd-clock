@@ -9,16 +9,17 @@ It’s designed for programmers, makers, tinkerers, and anyone who thinks regula
 
 ## ✨ Features
 
+### 🔌 GPIO LED Output
+
+* Supports RGBW LED strings
+* Specifically designed for **SK6812** LEDs
+* May work for **WS2812** LEDs
+
 ### 🖥️ HDMI Display Output
 
 * Visual binary clock matrix
 * Optional keyboard shortcuts (when a keyboard is connected)
-* Configurable text line for extra time‑related info
-
-### 🔌 GPIO LED Output
-
-* Supports RGBW LED strings
-* Specifically designed for **SK6812‑style** LEDs
+* Optional text line for extra time‑related info
 
 ---
 
@@ -76,12 +77,48 @@ Only **bit 0** is on, so the bottom‑right LED is lit.
 
 ---
 
+## 🧵 Wiring
+
+### Wiring (quick reminder for SK6812 chain):
+Use 25 individually addressable SK6812 RGB LEDs (or a pre-made 5x5 SK6812 matrix if you can find one).
+Chain them in a row-major order (left-to-right, top-to-bottom).
+
+### Connections:
+5V → Pi 5V (pin 2/4) or better: external 5V 2-5A supply (share GND!)
+GND → Pi GND
+Data In of first LED → GPIO 18 (physical pin 12) — hardware PWM pin, best for WS2812/SK6812 leds
+
+Add a 470Ω resistor in series on the data line (good practice).
+Add 1000µF capacitor across 5V/GND near the LEDs if using many.
+
+---
+
 ## 🚀 Getting Started
 
-*(Add installation steps, wiring diagrams, or build instructions here)*
+### Install Debian Trixie or similar
+
+### Edit startup file in the Debian Terminal:
+
+```cli
+nano ~/.config/autostart/nerdclock.desktop
+```
+
+contents should be:
+
+```text
+[Desktop Entry]
+Type=Application
+Name=5x5 Binary Nerd Clock
+Exec=python3 /home/rob/Binary_Clock/nerd_clock.py
+Hidden=false
+NoDisplay=false
+```
+
+Modify the file as necessary, then hit:
+**Ctrl-O**, **enter**, then **Ctrl-X** (save & exit)
 
 ---
 
 ## 🛠️ Future Enhancements
 
-*(Optional — add roadmap here)*
+*Need to fix LED control*
